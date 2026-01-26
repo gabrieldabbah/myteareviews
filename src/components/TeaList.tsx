@@ -94,6 +94,12 @@ const TeaList = () => {
                                     Type
                                 </th>
                                 <th
+                                    className="px-6 py-6 cursor-pointer hover:text-primary-500 transition-colors select-none"
+                                    onClick={() => handleSort('form')}
+                                >
+                                    Form
+                                </th>
+                                <th
                                     className="px-6 py-6 text-center cursor-pointer hover:text-primary-500 transition-colors select-none"
                                     onClick={() => handleSort('score')}
                                     title="Sort by Score"
@@ -134,6 +140,9 @@ const TeaList = () => {
                                         )}>
                                             {tea.type}
                                         </span>
+                                    </td>
+                                    <td className="px-6 py-6 text-text-muted font-medium">
+                                        {tea.form}
                                     </td>
                                     <td className="px-6 py-6 text-center">
                                         <span className={clsx(
@@ -184,7 +193,7 @@ const TeaList = () => {
                                         </span>
                                     </div>
                                     <h3 className="font-bold text-text-main text-xl tracking-tight">{tea.name}</h3>
-                                    <p className="text-sm text-primary-500/80 font-medium">{tea.brand}</p>
+                                    <p className="text-sm text-primary-500/80 font-medium">{tea.brand} • <span className="text-text-muted font-normal">{tea.form}</span></p>
                                 </div>
                                 <div className="flex flex-col items-end gap-1">
                                     <span className={clsx(
