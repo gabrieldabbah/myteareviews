@@ -1,0 +1,36 @@
+{
+    "meta": {
+        "description": "Definition of the 4 Core Axes of Teasonality. Refined based on MyTeaReviews flavor profiles.",
+        "logic": "Each user gets a score on each axis. Moderate intensity (50-60%) = Lowercase (e.g., 'f'). High intensity (>60%) = Uppercase (e.g., 'F')."
+    },
+    "attributes": [
+        {
+            "key": "F",
+            "name": "Fruity/Sweet",
+            "oppositeKey": "E",
+            "oppositeName": "Earthy/Savory",
+            "description": "The Flavor Profile. 'F' gravitates towards bright, floral, berry, and sweet notes (e.g., Peach, Jasmine). 'E' gravitates towards deep, woody, nutty, and savory notes (e.g., Puerh, Rooibos, Ginseng)."
+        },
+        {
+            "key": "C",
+            "name": "Caffeinated",
+            "oppositeKey": "R",
+            "oppositeName": "Relaxed",
+            "description": "The Energy Axis. 'C' seeks fuel and focus (Matcha, Black, White). 'R' seeks calm and comfort (Herbal, Rooibos)."
+        },
+        {
+            "key": "T",
+            "name": "Traditional",
+            "oppositeKey": "A",
+            "oppositeName": "Adventurous",
+            "description": "The Style Axis. 'T' respects the leaf, origin, and ritual (Gongfu, Pure). 'A' loves blends, flavors, bubbles, and fun."
+        },
+        {
+            "key": "P",
+            "name": "Pure",
+            "oppositeKey": "M",
+            "oppositeName": "Milky",
+            "description": "The Texture Axis. 'P' wants the clear, unadulterated liquor. 'M' loves the richness of milk, cream, or latte styles."
+        }
+    ]
+}
