@@ -45,7 +45,7 @@ const Header = () => {
                     <div className="w-px h-6 bg-border/50 hidden md:block" />
 
                     <a
-                        href="https://github.com/gabrieldabbah?tab=repositories"
+                        href="https://github.com/gabrieldabbah/myteareviews"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-text-muted hover:text-text-main transition-colors hidden md:block"
