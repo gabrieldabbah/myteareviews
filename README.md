@@ -1,7 +1,6 @@
 # My Tea Reviews
 
-(https://myteareviews.com)[Sleek website with my tea reviews.]
-
+[myteareviews.com](https://myteareviews.com)
 
 ## Features
 
