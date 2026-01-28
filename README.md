@@ -2,14 +2,12 @@
 
 [myteareviews.com](https://myteareviews.com)
 
-
 ## Features
 
-- [x] **Tea Ranking**: Comprehensive list of tea reviews, sortable by score.
-- [] **Modern Aesthetic**: Sleek design with calming green accents.
-    - light mode is a bit wonky
-- [] **Discovery**: Interactive quiz to find teas matching user's preferences
-- [] **Teasonality**: Interactive quiz to show quirky unique personalities that are tea related
+- [x] **Tea Ranking**: list of tea reviews, sortable by any column
+- [ ] **Light Mode for crazy people**
+- [ ] **Discovery**: Interactive quiz to find teas matching user's preferences
+- [ ] **Teasonality**: Interactive quiz to show quirky unique personalities that are tea related
 
 ## Tech Stack
 
