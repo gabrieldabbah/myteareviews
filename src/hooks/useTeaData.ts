@@ -32,7 +32,9 @@ export const useTeaData = () => {
                                 score: parseFloat(row.Score),
                                 description: row.Description,
                                 ppp: parseFloat(priceString),
-                                link: row.link
+                                link: row.link,
+                                caffeine: parseInt(row.Caffeine || '0', 10),
+                                sweetness: parseInt(row.Sweetness || '0', 10)
                             };
                         }).sort((a, b) => b.score - a.score); // Default sort by score desc
 
