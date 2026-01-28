@@ -67,84 +67,94 @@ const TeaList = () => {
                         <thead className="bg-white/50 dark:bg-black/40 text-text-muted text-sm uppercase tracking-widest font-semibold border-b border-white/20">
                             <tr>
                                 <th
-                                    className="px-8 py-6 w-24 text-center cursor-pointer hover:text-primary-500 transition-colors select-none"
+                                    className="px-4 py-6 w-16 text-center cursor-pointer hover:text-primary-500 transition-colors select-none"
                                     onClick={() => handleSort('rank')}
                                     title="Sort by Rank"
                                 >
                                     #
                                 </th>
                                 <th
-                                    className="px-6 py-6 cursor-pointer hover:text-primary-500 transition-colors select-none"
+                                    className="px-4 py-6 cursor-pointer hover:text-primary-500 transition-colors select-none"
                                     onClick={() => handleSort('name')}
                                     title="Sort by Name"
                                 >
                                     Name
                                 </th>
                                 <th
-                                    className="px-6 py-6 cursor-pointer hover:text-primary-500 transition-colors select-none"
+                                    className="px-4 py-6 cursor-pointer hover:text-primary-500 transition-colors select-none"
                                     onClick={() => handleSort('brand')}
                                     title="Sort by Brand"
                                 >
                                     Brand
                                 </th>
                                 <th
-                                    className="px-6 py-6 cursor-pointer hover:text-primary-500 transition-colors select-none"
+                                    className="px-2 py-6 cursor-pointer hover:text-primary-500 transition-colors select-none"
                                     onClick={() => handleSort('type')}
                                 >
                                     Type
                                 </th>
                                 <th
-                                    className="px-6 py-6 cursor-pointer hover:text-primary-500 transition-colors select-none"
+                                    className="px-2 py-6 cursor-pointer hover:text-primary-500 transition-colors select-none"
                                     onClick={() => handleSort('form')}
                                 >
                                     Form
                                 </th>
                                 <th
-                                    className="px-6 py-6 text-center cursor-pointer hover:text-primary-500 transition-colors select-none"
+                                    className="px-4 py-6 text-center cursor-pointer hover:text-primary-500 transition-colors select-none"
                                     onClick={() => handleSort('score')}
                                     title="Sort by Score"
                                 >
                                     Score
                                 </th>
-                                <th className="px-6 py-6 w-[35%]">Description</th>
+                                <th className="px-4 py-6 w-[40%]">Description</th>
                                 <th
-                                    className="px-6 py-6 cursor-pointer hover:text-primary-500 transition-colors select-none"
+                                    className="px-2 py-6 cursor-pointer hover:text-primary-500 transition-colors select-none whitespace-nowrap"
                                     onClick={() => handleSort('ppp')}
                                     title="Sort by Price"
                                 >
                                     Price (350ml)
                                 </th>
-                                <th className="px-8 py-6 text-right">Link</th>
+                                <th className="px-4 py-6 text-right w-20">Link</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-white/10 text-text-main">
                             {sortedTeas.map((tea) => (
                                 <tr key={`${tea.name}-${tea.brand}`} className="hover:bg-white/10 dark:hover:bg-white/5 transition-colors group">
-                                    <td className="px-8 py-6 text-center font-bold text-text-muted group-hover:text-primary-500/80 transition-colors">
+                                    <td className="px-4 py-6 text-center font-bold text-text-muted group-hover:text-primary-500/80 transition-colors">
                                         {tea.rank}
                                     </td>
-                                    <td className="px-6 py-6 font-semibold text-lg group-hover:text-primary-500 transition-colors">
+                                    <td className="px-4 py-6 font-semibold text-lg group-hover:text-primary-500 transition-colors">
                                         {tea.name}
                                     </td>
-                                    <td className="px-6 py-6 text-text-muted font-medium">
+                                    <td className="px-4 py-6 text-text-muted font-medium">
                                         {tea.brand}
                                     </td>
-                                    <td className="px-6 py-6">
-                                        <span className={clsx(
-                                            "inline-flex items-center gap-1.5 text-sm font-medium leading-none px-3 py-1 rounded-full bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/10",
-                                            tea.type === 'Green' ? "text-green-600 dark:text-green-400 border-green-200/20" :
-                                                tea.type === 'Black' ? "text-stone-600 dark:text-stone-300 border-stone-200/20" :
-                                                    tea.type === 'White' ? "text-yellow-600 dark:text-yellow-100 border-yellow-200/20" :
-                                                        tea.type === 'Oolong' ? "text-orange-600 dark:text-orange-300 border-orange-200/20" :
-                                                            "text-purple-600 dark:text-purple-300 border-purple-200/20"
-                                        )}>
-                                            {tea.type}
-                                        </span>
+                                    <td className="px-2 py-6">
+                                        <div className="relative group inline-block">
+                                            <span className={clsx(
+                                                "inline-flex items-center gap-1.5 text-sm font-medium leading-none px-3 py-1 rounded-full bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/10 cursor-help",
+                                                tea.type === 'Green' ? "text-green-600 dark:text-green-400 border-green-200/20" :
+                                                    tea.type === 'Black' ? "text-stone-600 dark:text-stone-300 border-stone-200/20" :
+                                                        tea.type === 'White' ? "text-yellow-600 dark:text-yellow-100 border-yellow-200/20" :
+                                                            tea.type === 'Oolong' ? "text-orange-600 dark:text-orange-300 border-orange-200/20" :
+                                                                "text-purple-600 dark:text-purple-300 border-purple-200/20"
+                                            )}>
+                                                {tea.type}
+                                            </span>
+                                            <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 w-48 p-3 bg-surface border border-border rounded-xl shadow-xl text-xs text-text-muted opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-20 pointer-events-none text-center">
+                                                {tea.type === 'Green' ? "Unoxidized. Fresh, grassy, or nutty flavors." :
+                                                    tea.type === 'Black' ? "Fully oxidized. Strong, robust, and bold." :
+                                                        tea.type === 'White' ? "Minimally processed. Delicate, subtle, and sweet." :
+                                                            tea.type === 'Oolong' ? "Partially oxidized. Complex with diverse range." :
+                                                                tea.type === 'Pu\'erh' ? "Fermented & aged. Earthy, rich, and deep." :
+                                                                    "Herbal or unique blends/infusions."}
+                                            </div>
+                                        </div>
                                     </td>
-                                    <td className="px-6 py-6 text-text-muted font-medium">
+                                    <td className="px-2 py-6 text-text-muted font-medium">
                                         {tea.form}
                                     </td>
-                                    <td className="px-6 py-6 text-center">
+                                    <td className="px-4 py-6 text-center">
                                         <span className={clsx(
                                             "text-xl font-bold font-mono tracking-tight",
                                             tea.score >= 8 ? "text-primary-600 dark:text-primary-400" :
@@ -153,13 +163,13 @@ const TeaList = () => {
                                             {tea.score === 10 ? 10 : tea.score % 1 === 0 ? <>{tea.score}<span className="text-transparent/0">.0</span></> : tea.score}
                                         </span>
                                     </td>
-                                    <td className="px-6 py-6 text-base text-text-muted leading-relaxed font-light">
+                                    <td className="px-4 py-6 text-base text-text-muted leading-relaxed font-light">
                                         "{tea.description}"
                                     </td>
-                                    <td className="px-6 py-6 font-mono text-base text-text-main font-medium">
+                                    <td className="px-2 py-6 font-mono text-base text-text-main font-medium whitespace-nowrap">
                                         ${tea.ppp.toFixed(2)}
                                     </td>
-                                    <td className="px-8 py-6 text-right">
+                                    <td className="px-4 py-6 text-right">
                                         {tea.link && tea.link !== 'null' ? (
                                             <a
                                                 href={tea.link}
@@ -186,11 +196,19 @@ const TeaList = () => {
                         <div key={`${tea.name}-${tea.brand}`} className="bg-surface/60 backdrop-blur-2xl p-6 rounded-[2rem] shadow-lg border border-white/10 flex flex-col gap-4 relative overflow-hidden">
                             <div className="flex justify-between items-start">
                                 <div className="space-y-1">
-                                    <div className="flex items-center gap-2">
+                                    <div className="flex items-center gap-2 relative group">
                                         <span className="text-xs font-bold text-text-muted uppercase tracking-widest">#{tea.rank}</span>
-                                        <span className="text-xs font-semibold text-primary-500">
+                                        <span className="text-xs font-semibold text-primary-500 cursor-help border-b border-primary-500/20 border-dashed">
                                             {tea.type}
                                         </span>
+                                        <div className="absolute left-0 bottom-full mb-2 w-48 p-3 bg-surface border border-border rounded-xl shadow-xl text-xs text-text-muted opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-20 pointer-events-none">
+                                            {tea.type === 'Green' ? "Unoxidized. Fresh/Grassy." :
+                                                tea.type === 'Black' ? "Fully oxidized. Robust." :
+                                                    tea.type === 'White' ? "Delicate & subtle." :
+                                                        tea.type === 'Oolong' ? "Complex & diverse." :
+                                                            tea.type === 'Pu\'erh' ? "Fermented & earthy." :
+                                                                "Herbal/Other blends."}
+                                        </div>
                                     </div>
                                     <h3 className="font-bold text-text-main text-xl tracking-tight">{tea.name}</h3>
                                     <p className="text-sm text-primary-500/80 font-medium">{tea.brand} • <span className="text-text-muted font-normal">{tea.form}</span></p>

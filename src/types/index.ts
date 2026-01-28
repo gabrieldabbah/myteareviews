@@ -8,6 +8,8 @@ export interface Tea {
     ppp: number; // Price per portion (350ml)
     link: string;
     rank?: number;
+    caffeine: number;
+    sweetness: number;
 }
 
 export interface CsvRow {
@@ -19,4 +21,6 @@ export interface CsvRow {
     Description: string;
     "PPP (350ml)": string;
     link: string;
+    Caffeine?: string; // Optional because legacy CSVs might not have it immediately in all envs (safe parsing)
+    Sweetness?: string;
 }
