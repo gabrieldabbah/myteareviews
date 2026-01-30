@@ -1,7 +1,7 @@
 import { Leaf, Github } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { clsx } from 'clsx';
-import ThemeToggle from './ThemeToggle';
+
 
 const Header = () => {
     const location = useLocation();
@@ -53,8 +53,6 @@ const Header = () => {
                     >
                         <Github className="w-5 h-5" />
                     </a>
-
-                    <ThemeToggle />
                 </div>
 
                 {/* Mobile menu placeholder */}
