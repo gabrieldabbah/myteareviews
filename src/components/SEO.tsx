@@ -42,6 +42,30 @@ const SEO = ({
             <meta name="twitter:title" content={fullTitle} />
             <meta name="twitter:description" content={description} />
             <meta name="twitter:image" content={absoluteImage} />
+
+            {/* JSON-LD Structured Data */}
+            <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": type === 'article' ? 'Article' : 'WebSite',
+                    "url": url,
+                    "name": fullTitle,
+                    "description": description,
+                    "image": absoluteImage,
+                    "author": {
+                        "@type": "Person",
+                        "name": "Gabriel Dabbah"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "My Tea Reviews",
+                        "logo": {
+                            "@type": "ImageObject",
+                            "url": `${window.location.origin}/leaf.svg`
+                        }
+                    }
+                })}
+            </script>
         </Helmet>
     );
 };

@@ -28,21 +28,24 @@ const Header = () => {
                 </Link>
 
                 <div className="flex items-center gap-6">
-                    <nav className="hidden md:flex items-center gap-6">
-                        {navItems.map((item) => (
-                            <Link
-                                key={item.path}
-                                to={item.path}
-                                className={clsx(
-                                    "text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5",
-                                    location.pathname === item.path
-                                        ? "text-primary-500"
-                                        : "text-text-muted hover:text-text-main"
-                                )}
-                            >
-                                {item.name}
-                            </Link>
-                        ))}
+                    <nav>
+                        <ul className="hidden md:flex items-center gap-6 list-none m-0 p-0">
+                            {navItems.map((item) => (
+                                <li key={item.path}>
+                                    <Link
+                                        to={item.path}
+                                        className={clsx(
+                                            "text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 inline-block",
+                                            location.pathname === item.path
+                                                ? "text-primary-500"
+                                                : "text-text-muted hover:text-text-main"
+                                        )}
+                                    >
+                                        {item.name}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
                     </nav>
 
                     <div className="w-px h-6 bg-border/50 hidden md:block" />

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://myteareviews.com/sitemap.xml
