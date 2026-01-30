@@ -336,7 +336,7 @@ const Discover = () => {
                         <h2 className="text-xl font-bold text-text-main">Your Ranking</h2>
                         <p className="text-sm text-text-muted">Updates in real-time</p>
                     </div>
-                    {/* Add visualizer of filters? */}
+
                 </div>
 
                 <div className="space-y-3">

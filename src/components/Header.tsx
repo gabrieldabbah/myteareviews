@@ -18,7 +18,7 @@ const Header = () => {
     ];
 
     return (
-        <header className="sticky top-0 z-50 bg-white/70 dark:bg-slate-900/80 backdrop-blur-xl border-b border-white/10 dark:border-slate-800 transition-all duration-300 shadow-sm">
+        <header className="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-xl border-b border-slate-800 transition-all duration-300 shadow-sm">
             <div className="container mx-auto px-4 h-20 flex items-center justify-between">
                 <Link to="/" className="flex items-center gap-3 text-primary-500 hover:text-primary-400 transition-colors group">
                     <div className="bg-primary-500/10 p-2 rounded-xl group-hover:scale-110 transition-transform duration-300">
@@ -28,21 +28,24 @@ const Header = () => {
                 </Link>
 
                 <div className="flex items-center gap-6">
-                    <nav className="hidden md:flex items-center gap-6">
-                        {navItems.map((item) => (
-                            <Link
-                                key={item.path}
-                                to={item.path}
-                                className={clsx(
-                                    "text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5",
-                                    location.pathname === item.path
-                                        ? "text-primary-500"
-                                        : "text-text-muted hover:text-text-main"
-                                )}
-                            >
-                                {item.name}
-                            </Link>
-                        ))}
+                    <nav>
+                        <ul className="hidden md:flex items-center gap-6 list-none m-0 p-0">
+                            {navItems.map((item) => (
+                                <li key={item.path}>
+                                    <Link
+                                        to={item.path}
+                                        className={clsx(
+                                            "text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 inline-block",
+                                            location.pathname === item.path
+                                                ? "text-primary-500"
+                                                : "text-text-muted hover:text-text-main"
+                                        )}
+                                    >
+                                        {item.name}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
                     </nav>
 
                     <div className="w-px h-6 bg-border/50 hidden md:block" />

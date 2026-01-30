@@ -1,7 +1,6 @@
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useRef } from 'react';
 import * as THREE from 'three';
-import { useTheme } from '../context/ThemeContext.tsx';
 
 const GradientShaderMaterial = {
     uniforms: {
@@ -51,15 +50,13 @@ const GradientShaderMaterial = {
   `
 };
 
-const AnimatedBackground = ({ theme }: { theme: string }) => {
+const AnimatedBackground = () => {
     const meshRef = useRef<THREE.Mesh>(null);
     const materialRef = useRef<THREE.ShaderMaterial>(null);
 
     // Colors
-    const darkColor = new THREE.Color('#22c55e');
-    const lightColor = new THREE.Color('#16a34a'); // Rich green for light mode
-    const activeColor = theme === 'dark' ? darkColor : lightColor;
-    const activeOpacity = theme === 'dark' ? 0.15 : 0.12;
+    const activeColor = new THREE.Color('#22c55e');
+    const activeOpacity = 0.15;
 
     useFrame((state) => {
         if (materialRef.current) {
@@ -84,12 +81,10 @@ const AnimatedBackground = ({ theme }: { theme: string }) => {
 };
 
 const Background = () => {
-    const { theme } = useTheme();
-
     return (
-        <div className="fixed inset-0 -z-50 pointer-events-none mix-blend-multiply dark:mix-blend-screen opacity-60 dark:opacity-100">
+        <div className="fixed inset-0 -z-50 pointer-events-none mix-blend-screen opacity-100">
             <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
-                <AnimatedBackground theme={theme} />
+                <AnimatedBackground />
             </Canvas>
         </div>
     );
