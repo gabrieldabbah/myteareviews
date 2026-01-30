@@ -127,6 +127,10 @@ const Discover = () => {
     // Renders
     return (
         <div className="min-h-screen pt-24 pb-20 px-4 md:px-8 flex flex-col md:flex-row gap-8">
+            <SEO
+                title="Discover Your Tea"
+                description="Take our interactive quiz to find the perfect tea for your taste buds."
+            />
 
             {/* Left Panel: Quiz Interface */}
             <div className="w-full md:w-1/3 min-w-[300px] shrink-0 space-y-8">
