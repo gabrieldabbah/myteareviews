@@ -74,6 +74,8 @@ If you are initializing this project from scratch:
 
 This compilation is based on personal opinion. Prices and links are updated manually and may not reflect current market status. I was not paid to review any tea; there are no ads or financial gain for this site.
 
-## License
+## Usage Policy
 
-[MIT](LICENSE)
+I open-sourced this because I want my reviews to be public. The code is MIT licensed, so you're free to use it, but please don't just clone the site, change the name, and deploy it.
+
+If you use this code, build something new with it. Don't just copy-paste my work—make it your own!
