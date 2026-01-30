@@ -25,20 +25,6 @@
 
 @layer base {
   :root {
-    /* Light Mode: (looks bad, gotta change later) */
-    --color-background: #ffffff;
-    --color-surface: #f0fdf4;
-    /* Minty White (Primary-50) */
-    --color-text-main: #14532d;
-    /* Primary-900 (Deep Green text) */
-    --color-text-muted: #15803d;
-    /* Primary-700 */
-    --color-border: #bbf7d0;
-    /* Primary-200 */
-  }
-
-  .dark {
-    /* Dark Mode: Deep Slate/Green */
     --color-background: #020617;
     --color-surface: #0f172a;
     --color-text-main: #f8fafc;
