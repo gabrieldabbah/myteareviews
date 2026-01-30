@@ -5,9 +5,8 @@
 ## Features
 
 - [x] **Tea Ranking**: list of tea reviews, sortable by any column
-- [ ] **Light Mode for crazy people**
-- [ ] **Discovery**: Interactive quiz to find teas matching user's preferences
-- [ ] **Teasonality**: Interactive quiz to show quirky unique personalities that are tea related
+- [x] **Discovery**: Interactive quiz to find teas matching user's preferences
+- [x] **Teasonality**: Interactive quiz to show quirky unique personalities that are tea related
 
 ## Tech Stack
 
