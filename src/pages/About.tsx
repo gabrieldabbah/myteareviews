@@ -1,6 +1,12 @@
+import SEO from '../components/SEO';
+
 const About = () => {
     return (
         <div className="container mx-auto px-4 py-16 max-w-3xl">
+            <SEO
+                title="About"
+                description="About My Tea Reviews. A personal project ranking teas from around the world."
+            />
             <h1 className="text-3xl font-bold text-primary-900 mb-6">About My Tea Reviews</h1>
             <div className="prose prose-slate prose-lg text-slate-600">
                 <p>

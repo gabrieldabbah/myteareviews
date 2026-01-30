@@ -4,6 +4,7 @@ import { Leaf, RefreshCcw, ExternalLink } from 'lucide-react';
 import { clsx } from 'clsx';
 import { useTeaData } from '../hooks/useTeaData';
 import type { Tea } from '../types';
+import SEO from '../components/SEO';
 
 const Teasonality = () => {
     // Data
@@ -139,9 +140,13 @@ const Teasonality = () => {
     }, [personality, teas]);
 
     return (
-        <div className="min-h-screen pt-24 pb-20 px-4 flex items-center justify-center">
+        <div className="min-h-screen pt-24 pb-20 px-4 relative overflow-hidden flex flex-col items-center justify-center">
+            <SEO
+                title="Teasonality Quiz"
+                description="What is your Tea Personality? Find out which tea matches your vibe."
+            />
 
-            {/* Quiz Container */}
+            {/* Background Animations */}
             <div className="w-full max-w-4xl">
 
                 {step < 6 && (

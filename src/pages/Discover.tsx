@@ -4,6 +4,7 @@ import { useTeaData } from '../hooks/useTeaData';
 import type { Tea } from '../types';
 import { clsx } from 'clsx';
 import { RefreshCcw, Coffee, Droplets, Leaf, DollarSign, ArrowLeft, ExternalLink } from 'lucide-react';
+import SEO from '../components/SEO';
 
 type QuizState = {
     caffeinePref: 'yes' | 'no' | 'neutral' | null;
