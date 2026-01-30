@@ -1,9 +1,14 @@
 import { Leaf, Droplets, Wind, Palette, ArrowRight, Scale, Coffee, Thermometer } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const Tea101 = () => {
     return (
         <div className="min-h-screen pt-24 pb-20 px-4 overflow-hidden relative">
+            <SEO
+                title="Tea 101"
+                description="The journey of the leaf. Learn the basics of tea, from plant to cup."
+            />
 
             {/* Background Decorations */}
             <div className="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">

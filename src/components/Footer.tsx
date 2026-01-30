@@ -22,8 +22,8 @@ const Footer = () => {
                     {/* Right Side */}
                     <div className="flex flex-col justify-start text-center md:text-right w-full md:w-auto gap-4">
                         {/* Match height with header roughly */}
-                        <a href="#" className="flex items-center justify-center md:justify-end gap-2 text-primary-500 hover:text-primary-400 font-medium transition-colors text-base group">
-                            Support this project <Heart className="w-4 h-4 fill-current group-hover:scale-110 transition-transform" />
+                        <a href="https://gabrieldabbah.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center md:justify-end gap-2 text-primary-500 hover:text-primary-400 font-medium transition-colors text-base group">
+                            Get to know more of my projects <Heart className="w-4 h-4 fill-current group-hover:scale-110 transition-transform" />
                         </a>
 
 
