@@ -193,7 +193,7 @@ const TeaList = () => {
                 {/* Mobile Card View */}
                 <div className="md:hidden space-y-6">
                     {sortedTeas.map((tea) => (
-                        <div key={`${tea.name}-${tea.brand}`} className="bg-surface/60 backdrop-blur-2xl p-6 rounded-[2rem] shadow-lg border border-white/10 flex flex-col gap-4 relative overflow-hidden">
+                        <div key={`${tea.name}-${tea.brand}`} className="bg-surface/60 backdrop-blur-2xl p-5 rounded-[2rem] shadow-lg border border-white/10 flex flex-col gap-3 relative overflow-hidden">
                             <div className="flex justify-between items-start">
                                 <div className="space-y-1">
                                     <div className="flex items-center gap-2 relative group">
@@ -222,23 +222,24 @@ const TeaList = () => {
                                         {tea.score}
                                     </span>
                                     <span className="text-sm text-text-main font-mono font-medium">${tea.ppp.toFixed(2)}</span>
+                                    {tea.link && tea.link !== 'null' && (
+                                        <a
+                                            href={tea.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-primary-400 hover:text-primary-300 transition-colors p-1"
+                                            title="View Tea"
+                                            aria-label="View Tea"
+                                        >
+                                            <ExternalLink className="w-5 h-5" />
+                                        </a>
+                                    )}
                                 </div>
                             </div>
 
                             <div className="relative pl-4 border-l-2 border-primary-500/50">
                                 <p className="text-base text-text-muted italic font-light leading-relaxed">"{tea.description}"</p>
                             </div>
-
-                            {tea.link && tea.link !== 'null' && (
-                                <a
-                                    href={tea.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="mt-2 w-full flex items-center justify-center gap-2 py-3.5 bg-primary-50/50 border border-primary-200 text-primary-600 font-bold rounded-2xl hover:bg-primary-500 hover:text-white hover:border-transparent transition-all duration-300 text-base group"
-                                >
-                                    View Product <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                                </a>
-                            )}
                         </div>
                     ))}
                 </div>
