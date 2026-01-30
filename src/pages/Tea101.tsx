@@ -1,4 +1,4 @@
-import { Leaf, Droplets, Sun, Wind, Palette, ArrowRight } from 'lucide-react';
+import { Leaf, Droplets, Wind, Palette, ArrowRight, Scale, Coffee, Thermometer } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Tea101 = () => {
@@ -130,6 +130,79 @@ const Tea101 = () => {
 
                         <div className="w-full md:w-1/2 order-2 md:order-2 pl-8 md:pl-12">
                             <span className="text-9xl font-serif text-white/5 absolute -top-10 -z-10 select-none">04</span>
+                        </div>
+                    </div>
+
+                    {/* Step 5: The Ratio */}
+                    <div className="relative flex flex-col md:flex-row items-center gap-12 group">
+                        <div className="w-full md:w-1/2 order-2 md:order-1 flex justify-end pr-8 md:pr-12">
+                            <span className="text-9xl font-serif text-white/5 absolute -top-10 -z-10 select-none right-0 md:right-1/2 md:mr-12">05</span>
+                        </div>
+
+                        {/* Center Node */}
+                        <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 bg-teal-400 rounded-full border-4 border-background z-10 hidden md:block shadow-[0_0_20px_rgba(45,212,191,0.5)]" />
+
+                        <div className="w-full md:w-1/2 flex justify-center md:justify-start order-1 md:order-2">
+                            <div className="bg-surface/50 backdrop-blur-xl border border-white/10 p-8 rounded-3xl max-w-sm hover:border-teal-400/30 transition-colors shadow-xl">
+                                <Scale className="w-12 h-12 text-teal-400 mb-6" />
+                                <h3 className="text-2xl font-bold text-white mb-4">The Golden Ratio</h3>
+                                <p className="text-text-muted leading-relaxed">
+                                    Don't overthink it. Start with <strong>1 teaspoon</strong> (approx 2-3g) of leaves for every cup (8oz).
+                                    Grandpa Style? Just throw leaves in a cup and add water. Precision is for baking, tea is for feeling.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Step 6: The Tools (Apparel) */}
+                    <div className="relative flex flex-col md:flex-row items-center gap-12 group">
+                        <div className="w-full md:w-1/2 flex justify-center md:justify-end order-1 md:order-1">
+                            <div className="bg-surface/50 backdrop-blur-xl border border-white/10 p-8 rounded-3xl max-w-sm hover:border-amber-400/30 transition-colors shadow-xl">
+                                <Coffee className="w-12 h-12 text-amber-400 mb-6" />
+                                <h3 className="text-2xl font-bold text-white mb-4">The Tools</h3>
+                                <p className="text-text-muted leading-relaxed">
+                                    You don't need a ceremony. A simple <strong>Mug</strong> and a strainer work wonders.
+                                    Ready to level up? Try a <em>Gaiwan</em> (lidded bowl) for short, concentrated steeps that reveal flavor layers.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Center Node */}
+                        <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 bg-amber-400 rounded-full border-4 border-background z-10 hidden md:block shadow-[0_0_20px_rgba(251,191,36,0.5)]" />
+
+                        <div className="w-full md:w-1/2 order-2 md:order-2 pl-8 md:pl-12">
+                            <span className="text-9xl font-serif text-white/5 absolute -top-10 -z-10 select-none">06</span>
+                        </div>
+                    </div>
+
+                    {/* Step 7: The Ritual (Steeping) */}
+                    <div className="relative flex flex-col md:flex-row items-center gap-12 group">
+                        <div className="w-full md:w-1/2 order-2 md:order-1 flex justify-end pr-8 md:pr-12">
+                            <span className="text-9xl font-serif text-white/5 absolute -top-10 -z-10 select-none right-0 md:right-1/2 md:mr-12">07</span>
+                        </div>
+
+                        {/* Center Node */}
+                        <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 bg-rose-400 rounded-full border-4 border-background z-10 hidden md:block shadow-[0_0_20px_rgba(251,113,133,0.5)]" />
+
+                        <div className="w-full md:w-1/2 flex justify-center md:justify-start order-1 md:order-2">
+                            <div className="bg-surface/50 backdrop-blur-xl border border-white/10 p-8 rounded-3xl max-w-sm hover:border-rose-400/30 transition-colors shadow-xl">
+                                <Thermometer className="w-12 h-12 text-rose-400 mb-6" />
+                                <h3 className="text-2xl font-bold text-white mb-4">Time & Heat</h3>
+                                <ul className="space-y-3 text-sm text-text-muted">
+                                    <li className="flex justify-between border-b border-white/5 pb-2">
+                                        <span>Green/White</span>
+                                        <span className="text-white font-mono">175°F • 2-3 min</span>
+                                    </li>
+                                    <li className="flex justify-between border-b border-white/5 pb-2">
+                                        <span>Oolong</span>
+                                        <span className="text-white font-mono">195°F • 3-4 min</span>
+                                    </li>
+                                    <li className="flex justify-between">
+                                        <span>Black/Herbal</span>
+                                        <span className="text-white font-mono">212°F • 4-5 min</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
