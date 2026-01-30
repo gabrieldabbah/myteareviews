@@ -12,7 +12,7 @@ const Footer = () => {
                             My Tea Reviews
                         </h3>
                         <p className="text-text-muted text-sm leading-relaxed">
-                            This compilation is based on personal opinion. Prices and links are updated manually and may not reflect current market status.
+                            This compilation is based on personal opinion. Prices and links are updated manually and may not reflect current market status. Last price update on Jan 20, 2026.
                         </p>
                         <p className="text-slate-600 dark:text-slate-500 text-xs">
                             Content provided for informational purposes only. I have received no financial compensation for reviews.
