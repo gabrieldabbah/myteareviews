@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import { useTeaData } from '../hooks/useTeaData';
 import type { Tea } from '../types';
 import { clsx } from 'clsx';
@@ -310,6 +311,16 @@ const Discover = () => {
                             </div>
                         )}
                     </div>
+                </div>
+                <div className="mt-8 text-center fade-in delay-100">
+                    <p className="text-sm text-text-muted mb-3">Not sure where to start?</p>
+                    <Link
+                        to="/tea-101"
+                        className="inline-flex items-center gap-2 text-sm font-bold text-primary-400 hover:text-primary-300 transition-colors border-b border-primary-500/20 hover:border-primary-400/50 pb-0.5"
+                    >
+                        <Leaf className="w-4 h-4" />
+                        New to drinking tea? Click here
+                    </Link>
                 </div>
             </div>
 

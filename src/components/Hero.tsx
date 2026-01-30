@@ -21,7 +21,7 @@ const Hero = () => {
     const indicatorOpacity = 1 - scrollProgress;
 
     return (
-        <section className="relative min-h-[90vh] flex flex-col justify-center items-center z-0 sticky top-0" style={{ marginBottom: '0px' }}>
+        <section className="relative min-h-[90vh] flex flex-col justify-center items-center z-0 md:sticky md:top-0" style={{ marginBottom: '0px' }}>
 
             {/* SVG Glow - Fixed to this section */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[150%] -z-10 pointer-events-none opacity-40 dark:opacity-20">

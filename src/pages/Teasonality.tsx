@@ -178,7 +178,7 @@ const Teasonality = () => {
                             </div>
 
                             {/* Options */}
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-10 relative z-10">
+                            <div className="grid grid-cols-3 gap-1 md:gap-4 pt-4 md:pt-10 relative z-10">
                                 {QUESTIONS[step].options.map((opt, idx) => {
                                     // Determine styling based on value
                                     const isPositive = opt.value === 1; // Green
@@ -190,25 +190,25 @@ const Teasonality = () => {
                                             key={idx}
                                             onClick={() => handleAnswer(QUESTIONS[step].axisIndex, opt.value)}
                                             className={clsx(
-                                                "group/btn flex flex-col items-center gap-4 p-6 rounded-2xl border transition-all duration-300 hover:scale-[1.02]",
-                                                "bg-black/20 border-white/5 hover:border-opacity-50 hover:shadow-lg",
+                                                "group/btn flex flex-col items-center justify-center gap-1.5 md:gap-4 p-1.5 md:p-6 rounded-2xl border transition-all duration-300 hover:scale-[1.02]",
+                                                "bg-black/20 border-white/5 hover:border-opacity-50 hover:shadow-lg min-h-[120px] md:min-h-0",
                                                 isPositive && "hover:border-green-400/50 hover:bg-green-900/20",
                                                 isNegative && "hover:border-red-400/50 hover:bg-red-900/20",
                                                 isNeutral && "hover:border-slate-400/50 hover:bg-slate-800/20"
                                             )}
                                         >
                                             <div className={clsx(
-                                                "p-4 rounded-full transition-transform duration-500 group-hover/btn:rotate-12",
+                                                "p-2 md:p-4 rounded-full transition-transform duration-500 group-hover/btn:rotate-12",
                                                 isPositive && "bg-green-500/10 text-green-400",
                                                 isNegative && "bg-red-500/10 text-red-400",
                                                 isNeutral && "bg-slate-500/10 text-slate-400"
                                             )}>
-                                                <Leaf className="w-8 h-8 fill-current" />
+                                                <Leaf className="w-5 h-5 md:w-8 md:h-8 fill-current" />
                                             </div>
 
-                                            <div className="space-y-1 text-center">
+                                            <div className="space-y-1 text-center w-full flex-grow flex items-center justify-center">
                                                 <span className={clsx(
-                                                    "text-lg font-bold leading-snug block",
+                                                    "text-[10px] md:text-lg font-bold leading-tight block break-words",
                                                     isPositive && "text-green-100 group-hover/btn:text-green-300",
                                                     isNegative && "text-red-100 group-hover/btn:text-red-300",
                                                     isNeutral && "text-slate-100 group-hover/btn:text-slate-300"

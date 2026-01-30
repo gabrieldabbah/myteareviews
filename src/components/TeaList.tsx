@@ -51,11 +51,11 @@ const TeaList = () => {
         <div className="w-full relative z-20 pt-10 pb-32">
 
             <div className="max-w-[1400px] mx-auto px-4">
-                <div className="flex items-center gap-3 mb-8 px-2 backdrop-blur-sm p-4 rounded-3xl inline-flex bg-background/5">
+                <div className="flex items-center justify-center md:justify-start gap-3 mb-8 px-4 py-3 backdrop-blur-sm rounded-3xl w-full md:w-auto md:inline-flex bg-background/5">
                     <h2 className="text-3xl font-bold text-text-main tracking-tight">My Ranked Teas</h2>
                     <div className="relative group mt-1">
                         <Info className="w-5 h-5 text-text-muted hover:text-primary-500 cursor-help transition-colors" />
-                        <div className="absolute left-0 bottom-full mb-3 w-72 p-4 bg-surface border border-border rounded-xl shadow-xl text-sm text-text-muted opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-20 pointer-events-none">
+                        <div className="absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 bottom-full mb-3 w-72 p-4 bg-surface border border-border rounded-xl shadow-xl text-sm text-text-muted opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-20 pointer-events-none">
                             <p>Disclaimer: This ranking is based on personal taste and opinion. I was not paid to review any of these teas.</p>
                         </div>
                     </div>
